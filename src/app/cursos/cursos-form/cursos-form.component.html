@@ -1,0 +1,19 @@
+<form class="needs-validation" novalidate [formGroup]="form">
+    <div class="form-row">
+        <div class="col-sm-12">
+            <label for="nome" class="form-label">Nome do Curso</label>
+            <!--NO NGCLASS, PRIMEIRO COLOCA O QUE QUER, DEPOIS SE VAI SER VERDADEIRO OU FALSO PRA SETAR-->
+            <input type="text" class="form-control " id="nome" formControlName="nome"
+                [ngClass]="{ 'is-invalid': submitted && hasError('nome') }" />           
+        </div>
+        <!--erros personalizados nos outros exemplos-->
+        <div class="alert alert-danger" role="alert" *ngIf="hasError('nome') && form.get('nome').touched">
+            Por favor informe um nome válido!
+        </div>
+        <div style="margin: 10px;">
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Enviar</button>
+            <button type="button" class="btn btn-default" (click)="onCancel()">Cancelar</button>
+        </div>
+    </div>
+   
+</form>

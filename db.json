@@ -7,6 +7,22 @@
     {
       "nome": "php",
       "id": 3
+    },
+    {
+      "nome": "Java Script",
+      "id": 4
+    },
+    {
+      "nome": "PostGre",
+      "id": 5
+    },
+    {
+      "nome": "MARIO",
+      "id": 6
+    },
+    {
+      "nome": "Alura",
+      "id": 7
     }
   ]
 }
